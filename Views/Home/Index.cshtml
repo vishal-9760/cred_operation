@@ -1,0 +1,22 @@
+﻿@model IEnumerable<cred_operation.Models.Employee>
+
+@Html.ActionLink("create employee","create","Home")
+<table class=" table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Salary</th>
+    </tr>
+    @foreach(var e in Model)
+            {
+                <tr>
+                    <td>@e.Id</td>
+                    <td>@e.Name</td>
+                    <td>@e.Email</td>
+                    <td>@e.Gender</td>
+                    <td>@e.Salary</td>
+                </tr>
+            }
+</table>
